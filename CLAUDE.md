@@ -4,25 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
-### Local Development (with Docker)
-- `docker compose up --build` - Start the application in development mode
-- `docker compose run base rails test` - Run the test suite (note: system tests don't work in Docker)
-- `docker compose run base rails console` - Open Rails console
-- `docker compose run base psql` - Open PostgreSQL console
-- `docker compose run base rails db:fixtures:load` - Load test data
+Don't use Docker.
 
-### Local Development (without Docker)
+### Local Development
 - `bin/dev` - Start all services (Rails server, worker, Tailwind watcher)
 - `bin/rails test` - Run unit/integration tests
 - `bin/rails test:system` - Run system tests with headless browser
 - `bin/rails db:prepare` - Set up and prepare database
 - `bin/rails db:fixtures:load` - Load test data
-
-### Using Just (if installed)
-- `just start` - Start the application from scratch
-- `just bash` - Get bash console in Docker container
-- `just overmind` - Access Overmind process manager
-- `just teardown` - Remove everything and start fresh
 
 ### Production Deployment
 - `RAILS_ENV=production RUN_SOLID_QUEUE_IN_PUMA=true DATABASE_URL=... rails s -p 8081` - Run production server
@@ -85,7 +74,7 @@ HostedGPT is a Ruby on Rails application that provides a ChatGPT-like interface 
 - Fixtures provide realistic test data
 - WebMock stubs external API calls
 - Minitest with retry logic for flaky tests
-- System tests use headless Chrome (don't work in Docker)
+- System tests use headless Chrome
 
 ## Key Patterns
 - **Current Context**: Uses `Current.set` for thread-local user/message context
