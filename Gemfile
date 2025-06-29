@@ -77,7 +77,7 @@ group :development do
   gem "rubocop-rails"
   gem "rubocop-capybara"
   gem "rubocop-minitest"
-  gem "dockerfile-rails", ">= 1.6"
+  gem "dockerfile-rails"
 end
 
 group :test do
