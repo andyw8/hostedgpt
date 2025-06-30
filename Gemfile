@@ -11,7 +11,7 @@ gem "puma", ">= 6.0"
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "turbo-rails"
 gem "stimulus-rails", "~> 1.3.3"
-gem "tailwindcss-rails", "~> 2.7.2"
+gem "tailwindcss-rails", "~> 3.3.1"
 gem "rack-cors"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
